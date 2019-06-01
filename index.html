@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Bart Scheduler</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header><h1>Bart Scheduler</h1></header>
+    <div class="container">
+        <aside class="sidebar" id="sidebarId">
+            
+        </aside>
+    
+        <section class="section" id="contentSection">
+            <div class="scheduleForm">
+                <label for="startStation">Departure: </label>
+                <select id="startStation" class="dropdown">
+                    <option>Select</option>
+                </select>
+                <label for="endStation">Arrival: </label>
+                <select id="endStation" class="dropdown">
+                    <option>Select</option>
+                </select>
+                <button id="formSubmit">Submit</button>
+            </div>
+
+            <div class="tableDiv" id="tableDiv">
+                
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>Created By: Shrujan A Kalidindi</p>
+        <p>Contact: skalidindi@scu.edu</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
