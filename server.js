@@ -1,6 +1,7 @@
 var express = require('express');
 var http = require('http');
 var app = express();
+app.use(express.static("public"));
 var server = http.createServer(app);
 var port = 8081;
 
