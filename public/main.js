@@ -30,7 +30,7 @@ window.onload = event => {
         welcomeBanner.html("Welcome!");
     }
     //get the list of stations
-    $.get("http://localhost:8081/stations", function(data) {
+    $.get("/stations", function(data) {
         let stationData = data["root"]["stations"]["station"];
         $.each(stationData, (index) => {
             startStation.append($("<option></option>").attr("value",stationData[index]["abbr"]).text(stationData[index]["name"]));
@@ -61,7 +61,7 @@ var trainTimer = (seconds) => setInterval(function() {
 endStation.on('change', (event) => {
     let value = event.target.value;
 
-    $.get("http://localhost:8081/station?source="+value, (data) => {
+    $.get("/station?source="+value, (data) => {
         //set departureStationData
         arrivalStationData["lat"] = data["root"]["stations"]["station"]["gtfs_latitude"];
         arrivalStationData["long"] = data["root"]["stations"]["station"]["gtfs_longitude"];
@@ -119,7 +119,7 @@ startStation.on('change', (event) => {
     if(value !== "Select") {
         let htmlString = "<h2>Departure Station Info: </h2>";
         //make a call to the API to get station details
-        $.get("http://localhost:8081/station?source="+value, (data) => {
+        $.get("/station?source="+value, (data) => {
             // //set departureStationData
             departureStationData["lat"] = data["root"]["stations"]["station"]["gtfs_latitude"];
             departureStationData["long"] = data["root"]["stations"]["station"]["gtfs_longitude"];
@@ -166,7 +166,7 @@ setSchedule = () => {
     //make the call to get the valid schedule
     let rows = "";
     table.html('<tr><th>Departure Time</th><th>Fare</th><th>Time of Arrival</th></tr>');
-    $.get('http://localhost:8081/trips?source='+departureStation+'&dest='+arrivalStation, (data) => {
+    $.get('/trips?source='+departureStation+'&dest='+arrivalStation, (data) => {
         let scheduleData = data["root"]["schedule"]["request"]["trip"];
         $.each(scheduleData, (index)=> {
             let row = "";
