@@ -78,7 +78,7 @@ function initMap() {
     directionsDisplay.setMap(map);
 }
 
-function setDirections() {
+function setDirectionsInMap() {
     //create start and end LatLng
     let start = new google.maps.LatLng(departureStationData["lat"], departureStationData["long"]);
     let end = new google.maps.LatLng(arrivalStationData["lat"], arrivalStationData["long"]);
@@ -199,8 +199,8 @@ setSchedule = () => {
         tableDiv.show();
         setDepartureTrainTimeInSeconds();
         startTimer();
-        setDirections();
         table.append(rows);
+        setDirectionsInMap();
     })
 }
 
