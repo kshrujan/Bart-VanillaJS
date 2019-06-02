@@ -68,7 +68,7 @@ endStation.on('change', (event) => {
     });
 });
 
-function initMap() {
+export function initMap() {
     window.directionsService = new google.maps.DirectionsService();
     window.directionsDisplay = new google.maps.DirectionsRenderer();
     var map = new google.maps.Map(document.getElementById('map'), {
