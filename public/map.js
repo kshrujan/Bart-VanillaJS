@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).load(function() {
     function initMap() {
         window.directionsService = new google.maps.DirectionsService();
         window.directionsDisplay = new google.maps.DirectionsRenderer();
