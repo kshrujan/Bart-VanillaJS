@@ -1,3 +1,6 @@
+<!-- Cross Site Scripting:
+    The reason that we are able to make the API call without triggering CORS is that we are essentially proxying our API calls to the BART API's by going through our own API built out in NodeJS (server.js). As the web application and Node server both run on the same port, there will be no CORS issues. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
