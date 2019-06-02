@@ -68,15 +68,15 @@ endStation.on('change', (event) => {
     });
 });
 
-function initMap() {
-    window.directionsService = new google.maps.DirectionsService();
-    window.directionsDisplay = new google.maps.DirectionsRenderer();
-    var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 37.773972, lng: -122.431297},
-        zoom: 10
-    });
-    directionsDisplay.setMap(map);
-}
+// function initMap() {
+//     window.directionsService = new google.maps.DirectionsService();
+//     window.directionsDisplay = new google.maps.DirectionsRenderer();
+//     var map = new google.maps.Map(document.getElementById('map'), {
+//         center: {lat: 37.773972, lng: -122.431297},
+//         zoom: 10
+//     });
+//     directionsDisplay.setMap(map);
+// }
 
 function setDirectionsInMap() {
     //create start and end LatLng
