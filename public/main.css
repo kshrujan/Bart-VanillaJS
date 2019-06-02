@@ -1,7 +1,8 @@
 header {
     margin: 0px;
-    background-color: #fff;
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
+    background-color: #0F5382;
+    color: #fff;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
     height: 50px;
     display: flex;
     align-items: center;
@@ -11,14 +12,14 @@ header {
 
 body {
     margin: 0px;
-    background-color: #2A4454;
+    background-color: #fff;
 }
 
 footer {
     font-style: italic;
     text-align: center;
-    background-color: #fff; 
-    width: 100%;
+    background-color: #0F5382;
+    color: #fff;
 }
 
 p {
@@ -33,9 +34,9 @@ p {
     width: 20%;
     z-index: -1;
     height: 100vh;
-    background-color: #546976;
+    background-color: #fff;
     text-align: center;
-    color: #FFF;
+    box-shadow: 5px 0px 10px rgba(0,0,0,0.1);
 }
 
 .sidebar h2 {
@@ -43,18 +44,87 @@ p {
 }
 
 .scheduleForm {
-    padding: 10px;
-    background: #fff;
-    height: 300px;
-    width: 100%;
-    border-radius: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
 }
 
 .section {
     margin: 0px auto;
-    margin-top: 10%;
+    margin-top: 5%;
+    text-align: center;
 }
 
 .dropdown {
     padding: 10px;
+    border-radius: 5px;
+}
+
+.tableDiv {
+    margin-top: 5%;
+    text-align: center;
+    display: none;
+}
+
+table {
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    margin: 0px auto;
+    border-collapse: collapse;
+}
+table tr th {
+    padding: 20px;
+    background-color: #0F5382;
+    color: #fff;
+    border-bottom: none;
+}
+table tr.row {
+    border-bottom: 2px solid #eee;
+}
+table tr td {
+    padding: 10px;
+}
+
+.first {
+    background-color: #c0e57f;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.submitButton {
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #0F5382;
+    border-radius: 5px;
+}
+
+.submitButton:hover {
+    background-color: #0F5382;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.time {
+    font-weight: bold;
+}
+
+.timeBeforeNextTrain {
+    color: red;
+    display: none;
+}
+
+.welcomeBanner {
+    margin-top: 10px;
+    background-color: #0F5382;
+    color: #fff;
+    height: 100%;
+    padding: 20px;
+}
+
+.dataContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.map {
+    height: 40%;
 }
